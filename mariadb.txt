@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+   db:
+     image: mariadb:latest
+     restart: unless-stopped
+     volumes:
+       - /root/maridb/data:/var/lib/mysql
+     environment:
+       MYSQL_ROOT_PASSWORD: abhi@jeet
+       MYSQL_DATABASE: testdb1
+       MYSQL_USER: abhi
+       MYSQL_PASSWORD: abhi
+     ports:
+       - 3306:3306
